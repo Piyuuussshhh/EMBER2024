@@ -70,7 +70,7 @@ def read_label(raw_features_string: str, label_type: str) -> str:
     Read the label or tag from raw features and return it
     """
     raw_features = json.loads(raw_features_string)
-    label = raw_features.get(label_type, -1)
+    label = raw_features[label_type]
     return label
 
 
